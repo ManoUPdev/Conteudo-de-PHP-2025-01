@@ -1,18 +1,18 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-   event.preventDefault(); //impede o envio do formulario
-
-
-   const name = Document.getElementById ('name').value.trim();
-   const email = Document.getElementById ('email').value.trim();
-   const message = Document.getElementById('message').value.trim();
-   const status = Document.getElementById ('formStatus');
-   
-   if (name == '' || email === '' || message === ''){
-    status
+   event.preventDefault(); // Impede o envio do formulário
+ 
+   const name = document.getElementById('name').value.trim();
+   const email = document.getElementById('email').value.trim();
+   const message = document.getElementById('message').value.trim();
+   const status = document.getElementById('formStatus');
+ 
+   if (name === '' || email === '' || message === '') {
+     status.textContent = 'Por favor, preencha todos os campos.';
+     status.style.color = 'red';
+   } else {
+     status.textContent = 'Mensagem enviada com sucesso!';
+     status.style.color = 'green';
+     // Aqui você pode integrar com o PHP futuramente
    }
-
-
-
-
-
-});
+ });
+ 
