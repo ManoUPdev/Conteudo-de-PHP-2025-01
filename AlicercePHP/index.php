@@ -11,5 +11,11 @@
     <h1>Entre em Contato</h1>
     
     <?php
+    $status = '';
+    if($_SERVER["REQUEST_METHOD"] === "POST") {
+       $name = trim($_POST['name'] ?? '');
+       $email = trim($_POST['email' ?? '']);
+       $message = trim($_POST['message']  ?? '');
+    }
 
 // continuar
